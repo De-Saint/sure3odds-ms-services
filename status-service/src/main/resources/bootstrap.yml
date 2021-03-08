@@ -1,0 +1,9 @@
+server:
+  port: 5000
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sure3odds_db_status_service?useTimezone=true&serverTimezone=Africa/Lagos
+  application:
+    name: status-service

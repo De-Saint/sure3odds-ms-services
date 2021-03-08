@@ -1,0 +1,9 @@
+server:
+  port: 7000
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sure3odds_db_selection_service?useTimezone=true&serverTimezone=Africa/Lagos
+  application:
+    name: selection-service

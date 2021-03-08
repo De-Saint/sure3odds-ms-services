@@ -1,0 +1,35 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL55Dialect
+  datasource:
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+
+cor:
+  url: http://localhost:8100,http://localhost:8101,http://86172152000d.ngrok.io
+
+management:
+  endpoints:
+    web:
+      cors:
+        allow-credentials: true
+
+sure:
+  conf:
+    param:
+      filter:
+        request-signature:
+          whitelist: ${SIGNATURE_FILTER_WHITELIST:/sure3odds/payments/plantype/getall,/sure3odds/games/game/free/get,/sure3odds/payments/parameter/get/1,/sure3odds/users/member/create,/sure3odds/users/member/authenticateuser,/v2/api-docs,/swagger-ui.html,/error,/configuration/ui,/swagger-resources,/configuration/security,/webjars/**,/swagger-resources/configuration/ui}
+          disabled: ${DISABLE_SIGNATURE_FILTER:false}
+      jwt:
+        enc-key: ${ENC_KEY:@Sure3Odds_Admin1}
+        issuer: Sure3Odds
+        validity: 60
+
+  sendgrid:
+    api-key: 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
+    template-id: d-4b52ba995e1a4cf78b531e2240bec30e
